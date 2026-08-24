@@ -18,12 +18,11 @@ jobs:
         os: [ubuntu-latest, macos-latest, windows-latest]
         python: ["3.9", "3.12"]
         exclude:
-          # setup-python ships no 3.9 build for the arm64 macOS runner
+          # setup-python ships no 3.9 build for the arm64 macOS runner, and the
+          # x86_64 macOS images that had one are gone: a job labelled macos-13
+          # sits queued forever instead of failing. So macOS is tested on 3.12,
+          # and 3.9 is covered on Linux and Windows.
           - os: macos-latest
-            python: "3.9"
-        include:
-          # so macOS on 3.9 runs on the last x86_64 image instead
-          - os: macos-13
             python: "3.9"
     steps:
       - uses: actions/checkout@v4
