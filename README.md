@@ -1,5 +1,7 @@
 # claude-code-spend
 
+[![tests](https://github.com/alexandersnakes/claude-code-spend/actions/workflows/ci.yml/badge.svg)](https://github.com/alexandersnakes/claude-code-spend/actions/workflows/ci.yml)
+
 One Python file that reads the transcripts Claude Code already writes on your
 machine and tells you what your agent sessions cost - and, more to the point,
 what the money actually bought.
