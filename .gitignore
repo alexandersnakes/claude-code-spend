@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+
+# what a run of the counter leaves behind
+after.json
+*.json.out
+
+# local environments
+.venv/
+venv/
